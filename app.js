@@ -15,7 +15,14 @@ function agregarAmigo(){
 
 //funcion asigna elementos a la lista
 function asignarLista(){
-    let elementoHtml = document.getElementById('listaAmigos');
-    elementoHtml.innerHTML = '';
-    return;
+    let elementoHtml = document.getElementById('listaAmigosHTML');
+    elementoHtml.innerHTML = ''; //limpia la lista antes de agregar
+    for (let i = 0; i < listaAmigos.length; i++){ //recorre el array
+        elementoHtml.innerHTML += `<li>${listaAmigos[i]}</li>`; //añade el nombre a la lista y muestra en la pagina
+    }
+}
+
+//funcion para sortear amigo
+function sortearAmigo(){
+    
 }
