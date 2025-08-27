@@ -24,5 +24,11 @@ function asignarLista(){
 
 //funcion para sortear amigo
 function sortearAmigo(){
-    
+    let seleccionarAmigo = Math.floor(Math.random()*listaAmigos.length); //Selecciona un indice aleatorio en el  array
+    let amigoSeleccionado = document.getElementById('resultado'); //actualiza el elemento seleccionado
+    if (listaAmigos.length == 0){
+        alert('La lista de amigos esta vacia'); //Alerta que la caja esta vacia
+    } else {
+        amigoSeleccionado.innerHTML = listaAmigos[seleccionarAmigo]; //muestra el nombre sorteado
+    }
 }
